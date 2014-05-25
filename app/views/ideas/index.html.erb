@@ -5,6 +5,7 @@
     <tr>
       <th>Name</th>
       <th>Description</th>
+      <th>Category</th>
       <th>Picture</th>
       <th></th>
       <th></th>
@@ -16,7 +17,8 @@
     <% @ideas.each do |idea| %>
       <tr>
         <td><%= idea.name %></td>
-        <td><%= idea.description %></td>
+        <td><%= idea.description %> </td>
+        <td><%= idea.category.name if idea.category.present? %> </td>
         <td><%= image_tag(idea.picture_url, :width => 50) if idea.picture.present? %> </td> 
         <td><%= link_to 'Show', idea %></td>
         <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
