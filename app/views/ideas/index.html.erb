@@ -1,12 +1,12 @@
-<h1>Listing ideas</h1>
+<h1>Lista pomysłów</h1>
 
 <table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Category</th>
-      <th>Picture</th>
+      <th>Nazwa</th>
+      <th>Opis dlaczego</th>
+      <th>Kategoria</th>
+      <th>Obrazek</th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,9 +20,9 @@
         <td><%= idea.description %> </td>
         <td><%= idea.category.name if idea.category.present? %> </td>
         <td><%= image_tag(idea.picture_url, :width => 50) if idea.picture.present? %> </td> 
-        <td><%= link_to 'Show', idea %></td>
-        <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-        <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Pokaż', idea %></td>
+        <td><%= link_to 'Edytuj', edit_idea_path(idea) %></td>
+        <td><%= link_to 'Usuń', idea, method: :delete, data: { confirm: 'Napewno?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Idea', new_idea_path %>
+<%= link_to 'Nowy pomysł', new_idea_path %>

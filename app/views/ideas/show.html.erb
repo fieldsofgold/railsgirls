@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nazwa:</strong>
   <%= @idea.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Dlaczego:</strong>
   <%= @idea.description %>
 </p>
 
 <p>
-  <strong>Picture:</strong>
+  <strong>Obraz (nuty):</strong>
   <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
 </p>
 
